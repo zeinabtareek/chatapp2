@@ -15,6 +15,9 @@ class K {
   static const whiteColor = Colors.white;
   static const hashtagColor = Color(0xFF515BD4);
   static const PosthashtagColor = Color(0xFF2FBBF0);
+  static const splashScreenColor = Color(0xFF404040);
+  static const splashStackColor = Color(0xFF595959);
+  static const splashTypingColor = Color(0xFFFDEE88);
   static final width = Get.width;
   static final height = Get.height;
 

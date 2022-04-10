@@ -85,7 +85,7 @@ class HomeScreen extends StatelessWidget {
                                 (horizontal: 2.0.w ,vertical: 2.0.h),
                               height:70.h,
                               width: 70.w,
-                              child:  UserAvatar(size: 100, isNav: false,),
+                              child:  UserAvatar(size: 100, isNav: false, image: 'assets/images/user_image.png',),
 
                             ),
                             K.sizedBoxW,

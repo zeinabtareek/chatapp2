@@ -202,6 +202,8 @@ class PostScreen extends StatelessWidget {
                                             UserAvatar(
                                               size: 50,
                                               isNav: index != 0 ? true : false,
+                                              image: 'assets/images/user_image.png',
+
                                             ),
                                             Container(
                                                 child: index != 0

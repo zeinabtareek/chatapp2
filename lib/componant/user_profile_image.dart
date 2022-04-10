@@ -35,7 +35,7 @@ String imgURL='109943543_34200.png';
           itemBuilder: (context, index) {
             return Column(
                 children: [
-              UserAvatar(size: 100, isNav: false,),
+              UserAvatar(size: 100, isNav: false, image: 'assets/images/user_image.png',),
                   K.sizedBoxH,
                   const Text('Perla_pipol',style: TextStyle(
                       color: K.whiteColor

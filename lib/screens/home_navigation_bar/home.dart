@@ -50,7 +50,7 @@ class Home extends StatelessWidget {
                       label: ''
                     ),
                     BottomNavigationBarItem(
-                      icon: UserAvatar(size: 40, isNav: true,),
+                      icon: UserAvatar(size: 40, isNav: true, image: 'assets/images/user_image.png',),
                         // color: Color(0xFF3A5A98),
                       // ),
                      label: ''

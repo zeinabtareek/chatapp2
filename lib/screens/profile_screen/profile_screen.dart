@@ -50,7 +50,6 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     Image.asset('assets/images/chat.png'),
 
-
                   ],
                 ),
 
@@ -62,7 +61,7 @@ class ProfileScreen extends StatelessWidget {
                         Column(
 
                           children: [
-                        UserAvatar(size: 100, isNav: false),
+                        UserAvatar(size: 100, isNav: false, image: 'assets/images/user_image.png',),
                             SizedBox(height: 4.h,),
                             Text('Mauricio LoPez',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 22.sp,color: K.whiteColor),),
                            SizedBox(height: 4.h,),

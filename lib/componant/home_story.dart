@@ -7,9 +7,11 @@ import '../constant.dart';
 class UserAvatar extends StatelessWidget {
   int size=100;
   bool? isNav=false;
+  String ?image;
     UserAvatar({
     required this.size ,
       required this.isNav ,
+      required this.image,
 
     Key? key,
   }) : super(key: key);
@@ -25,21 +27,20 @@ class UserAvatar extends StatelessWidget {
             backgroundColor: K.mainColor.withOpacity(.8),
             child: Padding(
               padding:isNav!=true? EdgeInsets.symmetric
-                (horizontal: 7.0.w ,vertical: 4.0.h):
+                (horizontal: 1.0.w ,vertical: 1.0.h):
               EdgeInsets.symmetric
                 (horizontal: 0.0.w ,vertical: 0.0.h),
               child: ClipRRect(
                 borderRadius: new BorderRadius.circular(100.0),
-                child:
-                Image.network(
-                  "https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg-1024x683.jpg"
-                  ,height: 100.h,
-                  width: 100.w,
-
-                  fit: BoxFit.cover,
-                ),
+                child:Image(image: AssetImage('assets/images/user_image.png',),
+                  height: 120.h,
+                    width: 120.w,
+                    fit: BoxFit.cover,
+                  // ),
+                ))
               ),
-            ),),
+              ),
+
 
         );
 
