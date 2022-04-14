@@ -14,7 +14,7 @@ class DisablePhoneButton extends StatelessWidget {
     return RaisedButton(
 
       onPressed: () {},
-      padding: EdgeInsets.all(0.0),
+      padding: const EdgeInsets.all(0.0),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(75.0)),
       child: Ink(
         decoration: BoxDecoration(

@@ -22,20 +22,23 @@ class UserAvatar extends StatelessWidget {
         Container(
           height: size.h,
           width: size.w,
-          child: CircleAvatar(
-            radius: 100.0,
+          color: Colors.transparent,
+          child:
+    CircleAvatar(
+            radius: 70.0,
             backgroundColor: K.mainColor.withOpacity(.8),
             child: Padding(
               padding:isNav!=true? EdgeInsets.symmetric
-                (horizontal: 1.0.w ,vertical: 1.0.h):
+                (horizontal: 3.0.w ,vertical: 3.0.h):
               EdgeInsets.symmetric
                 (horizontal: 0.0.w ,vertical: 0.0.h),
-              child: ClipRRect(
-                borderRadius: new BorderRadius.circular(100.0),
-                child:Image(image: AssetImage('assets/images/user_image.png',),
-                  height: 120.h,
-                    width: 120.w,
-                    fit: BoxFit.cover,
+              child: ClipOval(
+                // borderRadius: new BorderRadius.circular(100.0),
+                child:Image(
+                  image: AssetImage('assets/images/user_image.png',),
+                  height:120.h,
+                  width: 120.w,
+                  fit: BoxFit.cover,
                   // ),
                 ))
               ),

@@ -25,7 +25,7 @@ class BusCarScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SearchTextField(onTap: (){},),
-                    CustomChatIcon(count: 2,),
+                    CustomChatIcon(count: 2, onTap: () {  },),
                   ],
                 ),
                 K.sizedBoxH,

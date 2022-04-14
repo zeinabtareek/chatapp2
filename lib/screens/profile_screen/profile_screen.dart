@@ -1,6 +1,5 @@
 import 'package:chatapp/componant/custom_button.dart';
 import 'package:chatapp/componant/home_story.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -10,6 +9,8 @@ import '../../data.dart';
 import 'controller.dart';
 
 class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({Key? key}) : super(key: key);
+
    @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,9 +31,10 @@ class ProfileScreen extends StatelessWidget {
                       bottomLeft: Radius.circular(20.0),
                     )
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                child: Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.end,
+                  // mainAxisAlignment: MainAxisAlignment.start,
+                  // crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -45,15 +47,13 @@ class ProfileScreen extends StatelessWidget {
                           left: 5.w,
                             right: 0,
                             bottom: 1.h,
-                            child: Text('+',style: TextStyle(color: Colors.white ,fontSize: 20 ),))
+                            child: const Text('+',style: TextStyle(color: Colors.white ,fontSize: 20 ),))
                       ],
                     ),
                     Image.asset('assets/images/chat.png'),
-
                   ],
                 ),
-
-                    Row(
+                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
 
@@ -62,19 +62,22 @@ class ProfileScreen extends StatelessWidget {
 
                           children: [
                         UserAvatar(size: 100, isNav: false, image: 'assets/images/user_image.png',),
-                            SizedBox(height: 4.h,),
+                            K.sizedBoxH,
                             Text('Mauricio LoPez',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 22.sp,color: K.whiteColor),),
-                           SizedBox(height: 4.h,),
+                            K.sizedBoxH,
+                            K.sizedBoxH,
+                            K.sizedBoxH,
                             Text('🖱 Diseño ui/ux y Fotografia 📷 Zihuatanejo, ',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 12.sp,color: K.whiteColor),),
-                            SizedBox(height: 4.h,),
-                            Text('  Mexico#LifeStyle #Design #Photography #Urban #Art',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 12.sp,color:K.hashtagColor ),)
+                            K.sizedBoxH,
+                            Text('  Mexico#LifeStyle #Design #Photography #Urban #Art',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 12.sp,color:K.hashtagColor ),),
+                            K.sizedBoxH,
+                            K.sizedBoxH,
 
-                      ],
+
+                          ],
                     )  ],
                     ),
-                    K.sizedBoxH,
-                    K.sizedBoxH,
-                    K.sizedBoxH,
+
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -101,31 +104,21 @@ class ProfileScreen extends StatelessWidget {
 
                       ],
                     ),
-                    K.sizedBoxH,
-                    K.sizedBoxH,
-
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         SizedBox(width: K.width/2.7.w,height: 55.h, child: Button(text: 'Follow', size: K.width/2.8.w),),
                         SizedBox(width: K.width/2.7.w,height: 55.h, child: Button(text: 'Follow', size: K.width/2.8.w),),
-
                        ],
                     ),
-
               ])
               )
-
               ),
               K.sizedBoxH,
               K.sizedBoxH,
-              K.sizedBoxH,
-              K.sizedBoxH,
               Button(text: 'Write Thing!', size: K.width),
-
-        Container(
+        SizedBox(
           height: 60.h,child:  ListView.builder(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
@@ -168,24 +161,21 @@ class ProfileScreen extends StatelessWidget {
                            );}
                            )),
                         ),
-                  Container(
-                    height: K.height,
-                    child: StaggeredGridView.countBuilder(
-                      crossAxisCount: 4,
-                      itemCount: 8,
-                      itemBuilder: (BuildContext context, int index) =>
-                           Image( image: AssetImage(Images[index].toString(),)as ImageProvider,
-                            height: K.height,
-                            width: K.width,
-                            fit: BoxFit.cover,
-
-                          ),
-                      staggeredTileBuilder: (int index) =>
-                      new StaggeredTile.count(2, index.isEven ? 2 : 1),
-                      mainAxisSpacing: 4.0,
-                      crossAxisSpacing: 4.0,
-                    )
-                   )
+                  StaggeredGridView.countBuilder(
+                    shrinkWrap: true,
+                    physics: const ClampingScrollPhysics(),
+                    crossAxisCount: 4,
+                    itemCount: 8,
+                    itemBuilder: (BuildContext context, int index) =>
+                         Image( image: AssetImage(Images[index].toString(),),
+                          height: K.height,
+                          width: K.width,
+                          fit: BoxFit.cover,),
+                    staggeredTileBuilder: (int index) =>
+                    StaggeredTile.count(2, index.isEven ? 2 : 1),
+                    mainAxisSpacing: 4.0,
+                    crossAxisSpacing: 4.0,
+                  )
                       ],
                     ),
                   ),

@@ -17,9 +17,13 @@ class K {
   static const PosthashtagColor = Color(0xFF2FBBF0);
   static const splashScreenColor = Color(0xFF404040);
   static const splashStackColor = Color(0xFF595959);
+  static const like = Colors.red;
   static const splashTypingColor = Color(0xFFFDEE88);
   static final width = Get.width;
   static final height = Get.height;
+
+
+
 
   static SizedBox sizedBoxH = SizedBox(
     height: 7.h,
