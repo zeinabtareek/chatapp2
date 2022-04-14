@@ -1,27 +1,35 @@
 
 
 
+import 'package:chatapp/screens/home/home_screen.dart';
+import 'package:get/get.dart';
+
 import '../../model/splash_model.dart';
 
 List<OnboardingModel> tabs = [
   OnboardingModel(
-    'assets/images/first_screen.png',
+    'assets/images/first_splash_screen.png',
     'تواصل مع جهات الاتصال لديك ',
     'اتصل بجهات الاتصال الخاصة بك في التطبيق مجانًا. أفضل جودة اتصال.',
+
+
   ),
 
   OnboardingModel(
     'assets/images/second_splash.png',
-    'كن علي تواصل دابم باصذقائك',
+    'كن علي تواصل دائم باصدقائك',
     'ابق على اتصال مع أصدقائك. الدردشة مع بعضكم البعض بسهولة',
+
   ),
   OnboardingModel(
     'assets/images/third_splash.png',
     'شارك الصور وملفات  الفيديو',
     'باستخدام هذا التطبيق ، يمكنك مشاركة الصور والفيديو وإرفاق الملفات بسهولة مع أي شخص آخر.',
+
   ),
 
 ];
+
 
 List<String> HomeImages=[
   'https://png.pngtree.com/png-vector/20191115/ourmid/pngtree-blank-cardboard-box-mockup-realistic-style-png-image_1989124.jpg',

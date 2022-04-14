@@ -3,11 +3,11 @@ import 'package:get/get.dart';
 
 class HomePageController extends GetxController{
 
-  final check = false.obs;
+  final   isLiked= false.obs;
 
 
-  isChecked(){
-    check.value = !check.value;
-
+  FavHandleTap() {
+    isLiked.value = !isLiked.value;
+    update();
   }
 }

@@ -30,9 +30,10 @@ class ProfileScreen extends StatelessWidget {
                       bottomLeft: Radius.circular(20.0),
                     )
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                child: Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.end,
+                  // mainAxisAlignment: MainAxisAlignment.start,
+                  // crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -49,11 +50,9 @@ class ProfileScreen extends StatelessWidget {
                       ],
                     ),
                     Image.asset('assets/images/chat.png'),
-
                   ],
                 ),
-
-                    Row(
+                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
 
@@ -62,19 +61,22 @@ class ProfileScreen extends StatelessWidget {
 
                           children: [
                         UserAvatar(size: 100, isNav: false, image: 'assets/images/user_image.png',),
-                            SizedBox(height: 4.h,),
+                            K.sizedBoxH,
                             Text('Mauricio LoPez',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 22.sp,color: K.whiteColor),),
-                           SizedBox(height: 4.h,),
+                            K.sizedBoxH,
+                            K.sizedBoxH,
+                            K.sizedBoxH,
                             Text('🖱 Diseño ui/ux y Fotografia 📷 Zihuatanejo, ',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 12.sp,color: K.whiteColor),),
-                            SizedBox(height: 4.h,),
-                            Text('  Mexico#LifeStyle #Design #Photography #Urban #Art',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 12.sp,color:K.hashtagColor ),)
+                            K.sizedBoxH,
+                            Text('  Mexico#LifeStyle #Design #Photography #Urban #Art',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 12.sp,color:K.hashtagColor ),),
+                            K.sizedBoxH,
+                            K.sizedBoxH,
 
-                      ],
+
+                          ],
                     )  ],
                     ),
-                    K.sizedBoxH,
-                    K.sizedBoxH,
-                    K.sizedBoxH,
+
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -101,12 +103,12 @@ class ProfileScreen extends StatelessWidget {
 
                       ],
                     ),
-                    K.sizedBoxH,
-                    K.sizedBoxH,
+
+
 
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.end,
 
                       children: [
                         SizedBox(width: K.width/2.7.w,height: 55.h, child: Button(text: 'Follow', size: K.width/2.8.w),),
@@ -121,8 +123,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               K.sizedBoxH,
               K.sizedBoxH,
-              K.sizedBoxH,
-              K.sizedBoxH,
+
               Button(text: 'Write Thing!', size: K.width),
 
         Container(
@@ -177,9 +178,7 @@ class ProfileScreen extends StatelessWidget {
                            Image( image: AssetImage(Images[index].toString(),)as ImageProvider,
                             height: K.height,
                             width: K.width,
-                            fit: BoxFit.cover,
-
-                          ),
+                            fit: BoxFit.cover,),
                       staggeredTileBuilder: (int index) =>
                       new StaggeredTile.count(2, index.isEven ? 2 : 1),
                       mainAxisSpacing: 4.0,

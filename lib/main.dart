@@ -1,7 +1,9 @@
 import 'package:chatapp/routes/app_route.dart';
 import 'package:chatapp/routes/app_screen.dart';
+import 'package:chatapp/screens/chat_screen/chat_screen.dart';
+import 'package:chatapp/screens/conversation_screen/conversation_screen.dart';
 import 'package:chatapp/screens/home/home_screen.dart';
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -33,8 +35,8 @@ class MyApp extends StatelessWidget {
               appBarTheme: AppBarTheme(backgroundColor:K.kBackGroundColor),
               scaffoldBackgroundColor:K.kBackGroundColor,
           ),
-                initialRoute: AppRoutes.splashScreen,
-          getPages: AppScreens.screens,
+                 initialRoute: AppRoutes.splashScreen,
+              getPages: AppScreens.screens,
         ),
       ),
     );

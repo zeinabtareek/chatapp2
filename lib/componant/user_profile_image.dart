@@ -33,15 +33,19 @@ String imgURL='109943543_34200.png';
                 horizontal: 16
             ),
           itemBuilder: (context, index) {
-            return Column(
+            return SingleChildScrollView(child:Column(
                 children: [
-              UserAvatar(size: 100, isNav: false, image: 'assets/images/user_image.png',),
+              UserAvatar(
+                size: 80, isNav: false, image: 'assets/images/user_image.png',),
                   K.sizedBoxH,
-                  const Text('Perla_pipol',style: TextStyle(
-                      color: K.whiteColor
+                    Text('Perla_pipol',
+                    style: TextStyle(
+                      color: K.whiteColor,
+                      fontSize: 12.sp
                   ),
                   ),
                 ],
+            )
             );
           }
         )

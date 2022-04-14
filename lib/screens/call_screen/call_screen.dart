@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:chatapp/componant/animated_componant/data.dart';
 import 'package:chatapp/componant/animated_componant/dot.dart';
+import 'package:chatapp/componant/call_fixed_row.dart';
 import 'package:chatapp/model/splash_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -38,22 +39,7 @@ class _CallingScreenState extends State<CallingScreen> {
               child:Column(
                 children: [
 
-                  Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
-                    children: [
-                      Container(
-                          child:  Padding(
-                            padding: EdgeInsets.only
-                              (left: 5.0.w ,top:  3.0.h,bottom:  3.0.h),
-                            child: Icon(Icons.arrow_back_ios ,color: Colors.black,size: 21.sp,),),
-                          decoration: BoxDecoration(
-                              color: K.whiteColor,
-                              borderRadius: new BorderRadius.circular(100)
-                          )
-                      ), Container(
-                        child:   Image.asset('assets/images/AddContact.png' ,),),
-                    ],
-                  ),
+                  CallingRow(),
                   SizedBox(
                     height: 96.h,
                   ),
@@ -85,7 +71,7 @@ class _CallingScreenState extends State<CallingScreen> {
                   ),
                   SizedBox(
                     height: 80.h,),
-                  DisablePhoneButton(),
+                  const DisablePhoneButton(),
                 ],
               )
           ),
@@ -94,4 +80,5 @@ class _CallingScreenState extends State<CallingScreen> {
 
   }
 }
+
 
